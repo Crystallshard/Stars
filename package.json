@@ -15,8 +15,27 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^4.3.0",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "@openfonts/old-standard-tt_all": "^1.44.2",
+    "babel-plugin-styled-components": "^2.0.7",
+    "gatsby": "^4.15.1",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^2.5.2",
+    "gatsby-plugin-mdx": "^3.4.0",
+    "gatsby-plugin-sharp": "^4.5.2",
+    "gatsby-plugin-styled-components": "^5.15.0",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^4.5.2",
+    "gatsby-transformer-remark": "^5.9.0",
+    "gatsby-transformer-sharp": "^4.5.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "acorn": "^8.7.1",
+    "babel-eslint": "^10.0.0",
+    "typescript": "^4.6.4"
   }
 }

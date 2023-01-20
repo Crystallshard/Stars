@@ -1,0 +1,38 @@
+[
+    {
+        "name": "CosmoSkull forcefed Tee",
+        "price": "$100.00",
+        "color": "Blue",
+        "imageName": "CosmoSkull-forcefed-Tee.png"
+    },
+    {
+        "name": "Kapital bandana shirt",
+        "price": "$100.00",
+        "color": "Black",
+        "imageName": "Kapital-bandana-shirt.png"
+    },
+    {
+        "name": "Single Stitched Inside Out Tee",
+        "price": "$100.00",
+        "color": "Navy/Red",
+        "imageName": "Single-Stitched-Inside-Out-Tee.png"
+    },
+    {
+        "name": "Unsoundrags vintage shirt",
+        "price": "$100.00",
+        "color": "Red",
+        "imageName": "Unsoundrags-vintage-shirt.png"
+    },
+    {
+        "name": "Nine jean jacket",
+        "price": "$100.00",
+        "color": "Red",
+        "imageName": "Nine-jean-jacket"
+    },
+    {
+        "name": "Arabic Hoodie",
+        "price": "$100.00",
+        "color": "Red",
+        "imageName": "Arabic-Hoodie"
+    }
+]

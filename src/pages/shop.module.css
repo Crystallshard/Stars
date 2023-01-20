@@ -1,0 +1,30 @@
+*{
+    padding: 0px 0px;
+    margin: 0px;
+  }
+  
+.star {
+    position: relative;
+    right: 50%;
+  
+    top: 30px;
+   z-index: 2;
+   
+    float: right;
+}
+
+.bag{
+    float: right;
+    
+    top: 40px;
+     
+    z-index: 5;
+}
+
+.test{
+    height: 20px;
+    width: 100%;
+    background-color: blue;
+    /* position: absolute ; */
+    margin-top: auto;
+}
