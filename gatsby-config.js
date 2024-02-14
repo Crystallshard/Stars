@@ -53,7 +53,5 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    "gatsby-plugin-mdx",
-    `gatsby-transformer-remark`,
   ],
 };
