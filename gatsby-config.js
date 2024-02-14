@@ -31,8 +31,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images/pic`,
+        name: `image`,
+        path: `${__dirname}/src/images/Clothing Images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `kapitalImages`,
+        path: `${__dirname}/src/images/Clothing Images/Kapital-shirt-pictures`,
       },
     },
     {

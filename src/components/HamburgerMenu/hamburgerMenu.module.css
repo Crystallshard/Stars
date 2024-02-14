@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400&display=swap');
+
+*{
+  padding: 0px 0px;
+  margin: 0px;
+  font-family: 'Darker Grotesque', sans-serif;
+}
+
+.opacity{
+  width: 100vw;
+  height: 100vh;
+ position: fixed;
+ background: rgb(0, 0, 0);
+ opacity: 0;
+ transition: opacity 0.5s;
+ pointer-events:none;
+ z-index: 2;
+ cursor: pointer;
+} 
+
+.innerNavList ul{
+  margin: 0;
+  padding: 0px 10px 0px;
+  text-align: right;
+  align-items: center;
+  }
+
+.innerNavList ul li{
+    
+  float: none;
+  display: inline-block;
+}
+
+.innerNavList ul li:nth-child(1){
+  z-index: 0;
+  float: left;
+}
+
+.innerNavList ul li a{
+  display:block;
+  padding: 10px 7px;
+  text-decoration: none;
+  color:black;
+  top: 100%;
+}
+
+/* page links */
+.linksContainer{
+  position: relative;
+  right: 55px;
+  font-size: 20px;
+}
+
+.pageLinks{
+  /* position: relative; */
+  /* bottom: 150px; */
+  list-style: none;
+  
+}
+
+.pLink{
+ padding-bottom: 15px;
+}
+
+.pageLinks ul, a{
+  text-decoration: none;
+  color:black;
+}
+
+/* info links */
+.infoLinks{
+  /* position: relative; */
+  list-style: none;
+  /* top: 230px; */
+}
+
+.infoLinks ul, a{
+  text-decoration: none;
+  color:black;
+}
+
+.iLink{
+  padding-bottom: 10px;
+}
+
+/* media querys */
+
+@media (max-width: 431px){
+ .linksContainer{
+      text-align: center;
+      font-size: 25px;
+      right: revert;
+ }
+
+ .pageLinks{
+      list-style: none;
+      position: revert;
+      padding-bottom: 40px;
+ }
+
+ .infoLinks{
+      list-style: none;
+      position: revert;
+      padding-top: 40px
+ }
+}
+
+@media (max-width: 321px){
+  
+ }
+ 
+
+ 
+ 

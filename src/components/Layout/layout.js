@@ -4,8 +4,8 @@ import {
   container,
 } from './layout.module.css'
 
-import NavBar from '../NavBar'
 
+import { CartContextProvider } from '../../context/Cart'
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -18,18 +18,22 @@ const Layout = ({ pageTitle, children }) => {
     }
   `)
 
+    console.log('Hello Im Layout')
+
   return (
-    <div className={container}>
-      <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-      {/* <header className={siteTitle}>{data.site.siteMetadata.title}</header> */}
-     
-     <NavBar /> 
+    <CartContextProvider>
+      <div className={container}>
+        <title>{pageTitle} | {data.site.siteMetadata.title}</title>
       
+
       
-      <main>
-        {children}
-      </main>
-    </div>
+        
+        <main>
+          {children}
+        </main>
+      
+      </div>
+    </CartContextProvider>
   )
 }
 export default Layout

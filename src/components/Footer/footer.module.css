@@ -1,0 +1,19 @@
+.footerContainer{
+    
+    /* bottom: 0; */
+    width: 100%;
+    margin-top: auto;
+    background-color: rgb(242, 242, 242);
+    height: 80px;
+}
+
+.line{
+    background-color: rgb(218, 218, 218);
+    width: 100%;
+    height: 1px;
+}
+.footerContent{
+    position: relative;
+    text-align: center;
+    top: 25%; 
+}

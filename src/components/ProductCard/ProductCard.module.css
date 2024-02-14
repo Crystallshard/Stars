@@ -1,6 +1,19 @@
 
-*{
-    padding: 0px 0px;
-    margin: 0px;
-    
-  }
+.productImage{
+  display: block;
+  margin: 0 auto;
+  width: 340px;
+  height: auto;
+}
+  
+.productName{
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+}
+
+.productPrice{
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+}

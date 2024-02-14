@@ -1,58 +1,11 @@
 *{
   padding: 0px 0px;
   margin: 0px;
-  
+ 
 } 
 
-::-webkit-scrollbar {
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
-}
-
-
-.container {
-  box-sizing: border-box;
-  margin: 0%;
-  padding: 0px 0px;
-  font-family: sans-serif;
-}
-
-h1 {
-margin: 0px;
-}
-/* make a dedicated css page for landing page */
-.star{
-  /* display: block; */
-  margin-left: auto;
-  margin-right: auto;
-  
-  top: 150px;
-  bottom: auto;
-  left: auto;
-  right: auto;
+/* body for all pages */
+.body{
   position: relative;
-}
-
-/* grid layout */
-.featuredProducts{
-  padding: 15px 0px 0px;
-  margin-top: 20px;
-  /* max-width: 1200px; */
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr) ;
-  grid-gap: 10px;
-}
-.featuredProductsItems{
-  border: 1px solid black;
-  background: #666;
-  height: 450px;
-}
-.featuredProductsDescription{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr) ;
-  grid-gap: 50px;
-}
-.featuredProductsDescriptionItems{
-  padding: 5px 0px 0px;
+  min-height: 135vh; 
 }

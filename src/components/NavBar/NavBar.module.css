@@ -1,229 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap');
-
-*{
-  padding: 0px 0px;
-  margin: 0px;
-  font-family: 'Cormorant Garamond', serif;
-  
-  /* background-color: rgb(187, 86, 86); */
-}
-/* html { background-color: #2a200e; } */
-header {
- 
-  top: 0;
-  z-index: 100;
-  align-items: center;
-  padding: 5px 0px;
-  background-color: rgb(187, 86, 86);
-  
-}
-.logo {
-  width: 150px;
-  height: 150px;
+.navbarContainter{
+    height: 90px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 1;
 }
 
-.nav-links li {
-  list-style: none;
-  text-align: left;
-  position: relative;
-  list-style: none;
-
+.starsContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.nav-link-item {
-  padding: 20px;
+.stars{
+    width: 100px;
+    height: 100px;
 }
 
-.site-title {
-  font-size: 3rem;
-  color: gray;
-  font-weight: 700;
-  margin: 3rem 0;
-}
-/* star logo */ 
-.star {
-  position: relative;
-  left: 20%;
-  /* bottom: 4px; */
- 
-  margin-left: 20px; 
-  float: right;
+.stars:hover{
+    position: relative;
+    bottom: -2px;
 }
 
-
-.contactTermsContainer, a{
- 
-  position: relative;
-
-  top: 30%;
+.navBarShadow{
+    position: absolute;
+    bottom: -3px;
+    height: 3px;
+    width: 100%;
+    background-image: linear-gradient(180deg, rgb(0 0 0 / 16%), rgb(0 0 0 / 0%));
 }
-
-.navContainer, a{
-  position: relative;
-  bottom: 19%;
-  
-}
-
-.mobileNav{
-  padding: 13px 0px 13px;
-  
-}
-
-.contactTermsList{
-  padding: 7px 0px 7px;
-  
-}
-.icons{
-  
-  
-  align-items: center;
-  
-}
-
-
-.icons li{
-margin: 0px 13.5px;
-
-}
-
-.navbar{
-  position: sticky; 
-}
-
-
-.innerNavList ul{
-margin: 0;
-padding: 0px 10px 0px;
-text-align: right;
-align-items: center;
-
-}
-.innerNavList ul li{
-  
-  float: none;
-  display: inline-block;
-}
-.innerNavList ul li:nth-child(1){
-  z-index: 5;
-float: left;
-}
-.innerNavList ul li a{
-  
-  display:block;
-  padding: 10px 7px;
-  text-decoration: none;
-  color:black;
-  top: 100%;
-}
-/* nav styles*/
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1, 1);
-  }
-  5% {
-    transform: scale(1.3, 1.3);
-  }
-  70% {
-    transform: scale(1, 1);
-  }
-}
-.linkList{
-  /* left: 12px; */
-}
-nav ul li .linkList:hover + .star{
-  animation: zoom-in-zoom-out 0.2s ease-in-out;
-  padding: 0px 0px;
-}
-
-nav, a{
-  text-decoration: none;
-  list-style: none;
-  color: black;
-  z-index: 1;
-  font-size: 18px;
-}
-
-nav li{
-  list-style: none;
-  
-
-}
-
-nav ul{
-  left: 15px;
-}
-
-.hamburger {
-  display: block;
-  position: relative;
-  
-
-  user-select: none;
-
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
-  cursor: pointer;
-}
-
-.hamburger:hover span:nth-child(2){
-  transform: translateX(10px);
-  background-color: var(--primary);
-}
-
-.hamburger.is-active span:nth-child(1){
-  transform: translate(0px, -2px) rotate(45deg);
-}
-
-.nav-link-text {
-  color: black;
-  display:block;
-  text-align: center;
-   margin-bottom: 45px;
-  padding: 12px 16px; 
-  position: relative;
-  right: 20px;
-  bottom: 70px;
- 
-}
-/* sticky navber */
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.content {
-  padding: 16px;
-}
-
-.sticky + .content {
-  padding-top: 60px;
-}
-/* opacity */
-.opacity{
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: rgb(0, 0, 0);
-  opacity: 0;
-  transition: opacity 0.5s;
-  /* pointer-events:all; toggle to make background unclickable*/
-  pointer-events:none;
-} 
-.show{
-  width: 100%;
-  height: 100%;
-  min-height: 902%;
-  top: 0%;
-  bottom: 0%;
-  position: absolute;
-  opacity: 40%;
- }
- /* nav link stuff */
-
- 
-
- 
- 

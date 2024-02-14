@@ -1,0 +1,69 @@
+.imageSliderContainer{
+    position: sticky;
+    top: 90px
+}
+
+.slider{
+    scroll-behavior: smooth;
+    /* padding-top: 90px; */
+}
+
+.leftArrow{
+    transform: rotate(180deg);
+    cursor: pointer;
+    height: 17.6px;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 50%;
+    width: 55px;
+    display: flex;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    margin-left: 30px;
+}
+
+.rightArrow{
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 50%;
+    width: 55px;
+    display: flex;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    margin-right: 30px;
+}
+
+.theImage{
+    /* display: flex; */
+    max-width: 613px;
+    margin: auto;
+    position: relative;
+    z-index: 0;
+}
+
+.arrows{
+    display: flex;
+    justify-content: space-between;
+    /* margin: 0px 15px 0px 15px; */
+    position: absolute;
+    top: 38%;
+    width: 100%;
+    z-index: 1;
+}
+
+@media (max-width: 1441px){
+   .theImage{
+        max-width: fit-content;
+   }
+    
+}
+
+@media (max-width: 821px){
+    .theImage{
+        max-width: none;
+   }
+
+}

@@ -1,7 +1,158 @@
-.bag{
-    float: right;
+h1{
+  font-weight: 100;
+}
+
+.theBag{
+  z-index: 10;
+  font-weight: 100;
+  font-size: 25px;
+  /* padding-right: 10px; */
+}
+
+.bagOpacity{
+  width: 100vw;
+  height: 100vh;
+ position: fixed;
+ background: rgb(0, 0, 0);
+ opacity: 0;
+ transition: opacity 0.5s;
+ pointer-events:none;
+ z-index: 3;
+ cursor: pointer;
+} 
+
+.innerNavList{
+  /* position: absolute;
+  top: 50%;
+  right: 0%;
+  transform: translate(-50%, -50%); */
+  z-index: 1;
+
+  position: fixed;
+  top: 31px;
+  right: 45px;
+}
+
+.innerNavList ul{
+  margin: 0;
+  padding: 0px 10px 0px;
+  text-align: right;
+  align-items: center;
+}
+
+.innerNavList ul li{
     
-    top: 40px;
-     
-    z-index: 5;
+  float: none;
+  display: inline-block;
+}
+
+.innerNavList ul li:nth-child(1){
+  z-index: 0;
+  float: left;
+}
+
+.innerNavList ul li a{
+  display:block;
+  padding: 10px 7px;
+  text-decoration: none;
+  color:black;
+  top: 100%;
+}
+
+
+/* bag styles */
+.bagHeader{
+  margin-top: 20px;
+  margin-bottom: auto;
+}
+
+.bagTitle{
+  font-weight: 100;
+  text-align: center;
+}
+
+.headerDivider{
+  background-color: rgb(0 0 0);
+  width: 295px;
+  height: 0.5px;
+  margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+.bagContents{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* background-color: blue; */
+}
+
+.bagFooter{
+  margin-bottom: 25px;
+  margin-top: auto;
+}
+
+.footerDivider{
+  background-color: rgb(0 0 0);
+  width: 295px;
+  height: 0.5px;
+  margin: 10px auto;
+}
+
+.checkOutButton{
+  width: 295px;
+  height: 85px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.subtotalDisplay{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subtotalDivider{
+  background-color: rgb(0 0 0);
+  width: 10px;
+  height: 0.5px;
+  margin: auto;
+}
+
+.xButtonContainer{
+  display: flex;
+  text-align: left;
+  
+    
+}
+
+.xButton{
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/* .xButton:hover{
+  background: #e3e3e3;
+  animation: fadeInAnimation ease-in-out 0.2s;
+} @keyframes fadeInAnimation {
+  0% {
+      background: #ffffff;
+  }
+  100% {
+      background: #e3e3e3;
+  }
+} */
+
+
+/* media querys */
+
+@media (max-width: 431px){
+ 
 }
