@@ -77,7 +77,7 @@ function Bag({ productName, productPrice, productImage, data, Bag, Clickable, Sh
     }
 
     /* get size from selected session storage */
-    const size = sessionStorage.getItem('key');
+    // const size = sessionStorage.getItem('key');
     /* ^ */
 
     /* testing for add to bag functionality */
