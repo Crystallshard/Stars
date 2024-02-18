@@ -1,6 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
-import productData from '../../config/products.json'
+import { useState } from "react";
 import Data from '../../config/data.json'
 import styled from "styled-components"
 import { graphql } from "gatsby";
@@ -61,8 +60,8 @@ const ShopPage = ({ data }) => {
     throw new Error("Cannot find product image image!");
   }
 
-  /* keeps bag closed when in shop page */
-  const [bag, showBag] = useState(true);
+  /* keeps bag closed when in shop page (!ERROR DOES NOT OPEN)*/
+  const [bag, showBag] = useState(true); 
   /* ^ */
 
   /* unchecks the size selection when returning to shop page */

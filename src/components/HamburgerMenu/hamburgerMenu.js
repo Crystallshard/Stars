@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { StaticImage } from 'gatsby-plugin-image'
 import { Link } from "gatsby";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import {
   opacity,
-    innerNavList,
-    pageLinks,
-    infoLinks,
-    pLink,
-    iLink,
-    linksContainer
+  innerNavList,
+  pageLinks,
+  infoLinks,
+  pLink,
+  iLink,
+  linksContainer
 } from "./HamburgerMenu.module.css";
 
 const MenuIcon = styled.button`
@@ -76,7 +75,7 @@ const HamburgerMenu = ({ title }) => {
 
   var [pointerEvent, PEToggle] = useState("auto")
   function clickable() {
-    if (pointerEvent == "auto") {
+    if (pointerEvent === "auto") {
       PEToggle("none")
       settoggle(0)
     } else {

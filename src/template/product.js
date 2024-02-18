@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import { useEffect, useState } from "react";
-import { productInfo } from '../config/products.json'
 import { getImage } from "gatsby-plugin-image";
 import Footer from '../components/Footer/footer'
 import { graphql } from 'gatsby'
@@ -13,14 +12,13 @@ import {
   productName,
   productPrice,
   productDescription,
-  colorInfoContainer,
-  colorDivider,
-  productColor,
-  productColorList,
+  // colorInfoContainer,
+  // colorDivider,
+  // productColor,
+  // productColorList,
   sizeContainer,
   productSize,
   sizeChartContainer,
-  ImageContainer,
   addToCartContainer,
   addToCartButton,
   productSizeList,
@@ -139,7 +137,7 @@ export default function ProductPage({ pageContext, data }, props) {
   var [toggle, settoggle] = React.useState(0.5)
   var [pointerEvent, PEToggle] = useState("auto")
   function clickable() {
-      if (pointerEvent == "auto") {
+      if (pointerEvent === "auto") {
           PEToggle("none")
           settoggle(0)
       } else {
@@ -154,12 +152,6 @@ export default function ProductPage({ pageContext, data }, props) {
   const [bag, showBag] = useState(true);
   /* ^ */
 
-  const bagArray = [];
-  function pushIntoArray(name, price, image){
-    bagArray.push(
-      
-    );
-  }
   return (
     <CartContextProvider>
       <body className={productPageBody}>

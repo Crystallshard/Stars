@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useState } from "react";
+import React from "react";
 
 import {
     bagOpacity,
@@ -15,14 +15,12 @@ import {
     subtotalDisplay,
     xButtonContainer,
     xButton,
-    cartHeader,
     bagContents,
 } from "./Bag.module.css"
-import { isConstructorDeclaration } from "typescript";
 import BagCard from "../BagCard/bagCard";
 import { getImage } from "gatsby-plugin-image";
 import { graphql } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+// import { GatsbyImage } from 'gatsby-plugin-image'
 
 import { useCartContext } from "../../context/Cart";
 
@@ -79,16 +77,6 @@ function Bag({ productName, productPrice, productImage, data, Bag, Clickable, Sh
     /* get size from selected session storage */
     // const size = sessionStorage.getItem('key');
     /* ^ */
-
-    /* testing for add to bag functionality */
-    const [items, setItems] = useState([]);
-
-
-    
-    // useEffect(() => {
-    //     setItems(props.items);
-    // }, [props.items]);
-     /* ^ */
 
      console.log('Products', products)
 

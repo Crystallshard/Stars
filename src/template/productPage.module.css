@@ -59,34 +59,34 @@
 }
 
 /* COLOR STYLES */
-.colorInfoContainer{
+/* .colorInfoContainer{
 
-}
+} */
 
-.productColor{
-    /* box-sizing: content-box;
+/* .productColor{
+    box-sizing: content-box;
     height: 22px;
-    width: 22px; */
-}
+    width: 22px;
+} */
 
-.productColor ul{
+/* .productColor ul{
     list-style: none;
     display: flex;
     justify-content: flex-start;
-}
+} */
 
-.color{
+/* .color{
     margin: 0px 5px 0px;
-}
+} */
 
-.colorDivider{
+/* .colorDivider{
     margin: 10px 0px 0px;
     width: 100%;
     height: 0.5px;
     background-color: #bcbcbc;
-}
+} */
 
-.productColorList li{
+/* .productColorList li{
     border: 1px solid rgba(0, 0, 0, 0.35);
     background: #FFF;
     width: 70px;
@@ -95,7 +95,7 @@
     display: inline-grid;
     align-items: center;
     margin: 5px 15px 5px;
-}
+} */
 
 /* SIZE STYLES */
 .sizeContainer{

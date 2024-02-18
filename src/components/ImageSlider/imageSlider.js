@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { GatsbyImage } from 'gatsby-plugin-image'
 import {
   imageSliderContainer,
   slider,

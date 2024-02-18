@@ -24,14 +24,9 @@ const Layout = ({ pageTitle, children }) => {
     <CartContextProvider>
       <div className={container}>
         <title>{pageTitle} | {data.site.siteMetadata.title}</title>
-      
-
-      
-        
         <main>
           {children}
         </main>
-      
       </div>
     </CartContextProvider>
   )

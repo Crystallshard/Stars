@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
     accordion,
     accordionHeader,
@@ -62,7 +62,7 @@ function Accordion({ title, details, sizeDetails, deliveryDetails }) {
     return (
         <>
             <div className={accordion}>
-                <div onClick={() => { setIsOpenDetails(!isOpenDetails); detailsLine() }} className={accordionHeader}>
+                <div className={accordionHeader} onClick={() => { setIsOpenDetails(!isOpenDetails); detailsLine() }}>
                     <div className={accordionIndicator}>{isOpenDetails ? '-' : '+'}</div>
                     <h3>DETAILS</h3>
                 </div>
@@ -77,7 +77,7 @@ function Accordion({ title, details, sizeDetails, deliveryDetails }) {
                 )}
             
             
-                <div onClick={() => { setIsOpenSizeChart(!isOpenSizeChart); sizeDetailsLine() }} className={accordionHeader}>
+                <div className={accordionHeader} onClick={() => { setIsOpenSizeChart(!isOpenSizeChart); sizeDetailsLine() }}>
                     <div className={accordionIndicator}>{isOpenSizeChart ? '-' : '+'}</div>
                     <h3>SIZING DETAILS</h3>
                 </div>
@@ -90,7 +90,7 @@ function Accordion({ title, details, sizeDetails, deliveryDetails }) {
                     </div>
                 )}
 
-                <div onClick={() => { setIsOpenDeliveryDetails(!isOpenDeliveryDetails); DeliveryDetailsLine() }} className={accordionHeader}>
+                <div className={accordionHeader} onClick={() => { setIsOpenDeliveryDetails(!isOpenDeliveryDetails); DeliveryDetailsLine() }}>
                     <div className={accordionIndicator}>{isOpenDeliveryDetails ? '-' : '+'}</div>
                     <h3>DELIVERY DETAILS</h3>
                 </div>

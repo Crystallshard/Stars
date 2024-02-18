@@ -15,9 +15,11 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.13.3",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-layout": "^4.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-plugin-styled-components": "^6.13.1",
     "gatsby-source-filesystem": "^5.13.1",
