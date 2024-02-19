@@ -30,13 +30,12 @@ import {
 } from '../template/productPage.module.css'
 
 //components
-import NavBar from '../components/Navbar/navbar';
 import Accordion from '../components/Accordion/accordion';
 import ImageSlider from '../components/ImageSlider/imageSlider';
 import Modal from '../components/Modal/modal';
-import Bag from '../components/Bag/bag';
 
 import { useCartContext, CartContextProvider } from '../context/Cart';
+import Layout from '../components/Layout/layout';
 
 
 export default function ProductPage({ pageContext, data }, props) {
@@ -109,7 +108,7 @@ export default function ProductPage({ pageContext, data }, props) {
       buttonID.checked = true;
     };
     /* ^ */
-    
+
     // if (typeof window !== 'undefined') {
     //   sessionStorage.clear();
     // }
@@ -122,7 +121,7 @@ export default function ProductPage({ pageContext, data }, props) {
           type="radio"
           name="radio"
           value={radio}
-          // checked={radio === product.size[i]}
+        // checked={radio === product.size[i]}
         />
         <label className={sizeLetter}
           for={product.size[i]}
@@ -133,71 +132,51 @@ export default function ProductPage({ pageContext, data }, props) {
     );
   }
 
-  /* when you click on the bag, open bag, and dim the background */
-  var [toggle, settoggle] = React.useState(0.5)
-  var [pointerEvent, PEToggle] = useState("auto")
-  function clickable() {
-      if (pointerEvent === "auto") {
-          PEToggle("none")
-          settoggle(0)
-      } else {
-          PEToggle("auto")
-          settoggle(0.5)
-      }
-      document.getElementById("bagOpacity").style.opacity = toggle;
-      document.getElementById("bagOpacity").style.pointerEvents = pointerEvent;
-  }
-  /* ^ */
-
-  const [bag, showBag] = useState(true);
-  /* ^ */
-
   return (
-    <CartContextProvider>
-      <body className={productPageBody}>
-        <NavBar />
-        <Bag productName={product.name} productPrice={product.price} productImage={getProductImageData(product.imageName)} Bag={bag} Clickable={() =>{clickable()}} Showbag={() =>{showBag(!bag)}} Toggle={toggle} PointerEvent={pointerEvent}/>
-        <div className={imageSelectionContainer}>
-          <div className={splitContainer}>
-            <div className={leftContainer}>
-              <ImageSlider images={pictureElementsArray} />
+    <Layout>
+      <CartContextProvider>
+        <body className={productPageBody}>
+          <div className={imageSelectionContainer}>
+            <div className={splitContainer}>
+              <div className={leftContainer}>
+                <ImageSlider images={pictureElementsArray} />
+              </div>
+            </div>
+
+            <div className={splitContainer}>
+              <div className={rightContainer}>
+                <div className={productInfoContainer}>
+                  <h1 className={productName}>{product.name}</h1>
+                  <h3 className={productPrice}>{product.price}</h3>
+                  <h3 className={productDescription}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </h3>
+                </div>
+
+                <div className={sizeContainer}>
+                  <ul className={productSizeList}>
+                    {sizeElemetsArray}
+                  </ul>
+                </div>
+
+
+                <div className={addToCartContainer}>
+                  <button className={addToCartButton} onClick={() => addProductToCart(product)}>ADD TO CART</button>
+                </div>
+                <div className={sizeChartContainer}>
+                  <h3 className={sizeChart} onClick={() => { setOpenModal(true) }}>SIZE CHART</h3>
+                  {openModal && <Modal closeModal={setOpenModal} name={product.name} />}
+                </div>
+                <Accordion details={product.details} sizeDetails={product.sizeDetails} deliveryDetails={product.deliveryDetails} />
+              </div>
             </div>
           </div>
-
-          <div className={splitContainer}>
-            <div className={rightContainer}>
-              <div className={productInfoContainer}>
-                <h1 className={productName}>{product.name}</h1>
-                <h3 className={productPrice}>{product.price}</h3>
-                <h3 className={productDescription}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </h3>
-              </div>
-
-              <div className={sizeContainer}>
-                <ul className={productSizeList}>
-                  {sizeElemetsArray}
-                </ul>
-              </div>
-
-
-              <div className={addToCartContainer}>
-                <button className={addToCartButton} onClick={() => addProductToCart(product) }>ADD TO CART</button>
-              </div>
-              <div className={sizeChartContainer}>
-                <h3 className={sizeChart} onClick={() => { setOpenModal(true) }}>SIZE CHART</h3>
-                {openModal && <Modal closeModal={setOpenModal} name={product.name} />}
-              </div>
-              <Accordion details={product.details} sizeDetails={product.sizeDetails} deliveryDetails={product.deliveryDetails} />
-            </div>
-          </div>
-        </div>
-        <Footer />
-      </body>
-    </CartContextProvider>
-
+          <Footer />
+        </body>
+      </CartContextProvider>
+    </Layout>
   )
 }
 

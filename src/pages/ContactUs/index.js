@@ -5,16 +5,17 @@ import {
 
 //components
 import Footer from '../../components/Footer/footer'
-import Navbar from '../../components/Navbar/navbar';
+import Layout from '../../components/Layout/layout'
 
 const ContactUs = () => {
     return (
         <>
-            <body className={contactUsBody}>
-                <Navbar />
-                <div>Contact us page!</div>
-                <Footer />
-            </body>
+            <Layout>
+                <body className={contactUsBody}>
+                    <div>Contact us page!</div>
+                    <Footer />
+                </body>
+            </Layout>
         </>
     )
 }

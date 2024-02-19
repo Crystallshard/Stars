@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import Data from '../../config/data.json'
 import styled from "styled-components"
 import { graphql } from "gatsby";
@@ -11,10 +10,8 @@ import {
 
 //components
 import Footer from '../../components/Footer/footer';
-import Navbar from "../../components/Navbar/navbar";
 import ProductCard from '../../components/ProductCard/index';
-import Bag from "../../components/Bag/bag";
-
+import Layout from "../../components/Layout/layout";
 
 
 const Container = styled.div`
@@ -60,29 +57,24 @@ const ShopPage = ({ data }) => {
     throw new Error("Cannot find product image image!");
   }
 
-  /* keeps bag closed when in shop page (!ERROR DOES NOT OPEN)*/
-  const [bag, showBag] = useState(true); 
-  /* ^ */
-
   /* unchecks the size selection when returning to shop page */
   if (typeof window !== 'undefined') {
     sessionStorage.clear();
   }
   /* ^ */
-  
+
   return (
     <>
-      <body className={shopBody}>
-        <Navbar />
-        <Bag Bag={bag}/>
-        <Container>
-          {Data.products.map(products => (
-            <ProductCard key={products.id} product={products} imageData={getProductImageData(products.imageName)} />
-          ))}
-        </Container>
-        <Footer />
-      </body>
-
+      <Layout>
+        <body className={shopBody}>
+          <Container>
+            {Data.products.map(products => (
+              <ProductCard key={products.id} product={products} imageData={getProductImageData(products.imageName)} />
+            ))}
+          </Container>
+          <Footer />
+        </body>
+      </Layout>
     </>
   )
 

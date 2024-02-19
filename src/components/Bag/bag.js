@@ -50,7 +50,7 @@ const MenuLinks = styled.nav`
 
 `;
 
-function Bag({ productName, productPrice, productImage, data, Bag, Clickable, Showbag, Toggle, PointerEvent}) {
+function Bag({ data, Bag, Clickable, Showbag }) {
 
     const { products } = useCartContext()
 

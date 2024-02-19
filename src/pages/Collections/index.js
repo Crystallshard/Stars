@@ -5,16 +5,17 @@ import {
 
 //components
 import Footer from '../../components/Footer/footer'
-import Navbar from "../../components/Navbar/navbar";
+import Layout from '../../components/Layout/layout'
 
 const Collections = () => {
     return (
         <>
-            <body className={collectionsBody}>
-                <Navbar />
-                <div>collections page!</div>
-                <Footer />
-            </body>
+            <Layout>
+                <body className={collectionsBody}>
+                    <div>collections page!</div>
+                    <Footer />
+                </body>
+            </Layout>
         </>
     )
 }

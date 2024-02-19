@@ -4,17 +4,18 @@ import {
 } from '../Lookbook/lookbook.module.css'
 
 //components
-import Navbar from "../../components/Navbar/navbar";
 import Footer from '../../components/Footer/footer'
+import Layout from '../../components/Layout/layout'
 
 const Lookbook = () => {
     return (
         <>
-            <body className={lookbookBody}>
-                <Navbar />
-                <div>lookbook page!</div>
-                <Footer />
-            </body>
+            <Layout>
+                <body className={lookbookBody}>
+                    <div>lookbook page!</div>
+                    <Footer />
+                </body>
+            </Layout>
         </>
     )
 }

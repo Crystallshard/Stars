@@ -5,16 +5,17 @@ import {
 
 //components
 import Footer from '../../components/Footer/footer'
-import Navbar from "../../components/Navbar/navbar";
+import Layout from '../../components/Layout/layout'
 
 const About = () => {
     return (
         <>
-            <body className={aboutBody}>
-                <Navbar />
-                <div>about stars page!</div>
-                <Footer />
-            </body>
+            <Layout>
+                <body className={aboutBody}>
+                    <div>about stars page!</div>
+                    <Footer />
+                </body>
+            </Layout>
         </>
     )
 }
