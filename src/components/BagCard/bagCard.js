@@ -1,4 +1,5 @@
 import React from "react";
+import { GatsbyImage } from 'gatsby-plugin-image'
 import {
     container,
     bagCardContainer,
@@ -13,13 +14,8 @@ import {
     quantityNumber,
     subtractQuantity,
 } from "./bagCard.module.css"
-import { GatsbyImage } from 'gatsby-plugin-image'
 
-
-
-function BagCard({ productName, productPrice, theSize, productImage, data }) {
-
-    
+function BagCard({ productName, productPrice, theSize, productImage }) {
 
     return (
         <>

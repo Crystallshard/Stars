@@ -3,62 +3,31 @@ h1{
 }
 
 .theBag{
-  z-index: 10;
-  font-weight: 100;
   font-size: 25px;
-  /* padding-right: 10px; */
 }
 
 .bagOpacity{
   width: 100vw;
   height: 100vh;
- position: fixed;
- background: rgb(0, 0, 0);
- opacity: 0;
- transition: opacity 0.5s;
- pointer-events:none;
- z-index: 3;
- cursor: pointer;
+  position: fixed;
+  background: rgb(0, 0, 0);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events:none;
+  z-index: 3;
+  cursor: pointer;
 } 
 
-.innerNavList{
+.bagContainer{
   /* position: absolute;
   top: 50%;
   right: 0%;
   transform: translate(-50%, -50%); */
   z-index: 1;
-
   position: fixed;
   top: 31px;
   right: 45px;
 }
-
-.innerNavList ul{
-  margin: 0;
-  padding: 0px 10px 0px;
-  text-align: right;
-  align-items: center;
-}
-
-.innerNavList ul li{
-    
-  float: none;
-  display: inline-block;
-}
-
-.innerNavList ul li:nth-child(1){
-  z-index: 0;
-  float: left;
-}
-
-.innerNavList ul li a{
-  display:block;
-  padding: 10px 7px;
-  text-decoration: none;
-  color:black;
-  top: 100%;
-}
-
 
 /* bag styles */
 .bagHeader{
@@ -84,7 +53,6 @@ h1{
   width: 100%;
   display: flex;
   justify-content: center;
-  /* background-color: blue; */
 }
 
 .bagFooter{
@@ -123,8 +91,6 @@ h1{
 .xButtonContainer{
   display: flex;
   text-align: left;
-  
-    
 }
 
 .xButton{
@@ -137,19 +103,6 @@ h1{
   align-items: center;
   display: flex;
 }
-
-/* .xButton:hover{
-  background: #e3e3e3;
-  animation: fadeInAnimation ease-in-out 0.2s;
-} @keyframes fadeInAnimation {
-  0% {
-      background: #ffffff;
-  }
-  100% {
-      background: #e3e3e3;
-  }
-} */
-
 
 /* media querys */
 

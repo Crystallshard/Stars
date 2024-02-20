@@ -20,7 +20,6 @@ export default function ProductCard({ product, imageData, key }) {
                         className={productImage}
                         image={imageData}
                     />
-                    {/* <p>{product.id}</p> */}
                     <h2 className={productName}>{product.name}</h2>
                     <h3 className={productPrice}>{formatCurrency(product.price)}</h3>
                 </Link>

@@ -10,7 +10,7 @@ import {
 } from "./accordion.module.css"
 
 
-function Accordion({ title, details, sizeDetails, deliveryDetails }) {
+function Accordion({ details, sizeDetails, deliveryDetails }) {
 
     const [isOpenDetails, setIsOpenDetails] = useState(false)
     const [isOpenSizeChart, setIsOpenSizeChart] = useState(false)
@@ -31,7 +31,6 @@ function Accordion({ title, details, sizeDetails, deliveryDetails }) {
 
     function sizeDetailsLine() {
         if (isOpenSizeChart === false) {
-            // document.getElementById('sizeDetails').style.animation = "sectionLineAnimation ease 3s";
             document.getElementById('sizeDetails').style.width = '100%';
             document.getElementById('details').style.width = '70%';
             document.getElementById('deliveryDetails').style.width = '70%';
@@ -39,7 +38,6 @@ function Accordion({ title, details, sizeDetails, deliveryDetails }) {
             setIsOpenDeliveryDetails(false);
         }
         if (isOpenSizeChart === true) {
-            // document.getElementById('sizeDetails').style.animation = "sectionLineAnimation ease 3s";
             document.getElementById('sizeDetails').style.width = '70%';
         }
     }
@@ -70,7 +68,6 @@ function Accordion({ title, details, sizeDetails, deliveryDetails }) {
                 {isOpenDetails && (
                     <div className={accordionBody}>
                         <div className={sizeDetailsParagraph}>
-
                             {details}
                         </div>
                     </div>

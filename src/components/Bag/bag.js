@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import React from "react";
+import { graphql } from 'gatsby'
+import { getImage } from "gatsby-plugin-image";
+import { useCartContext } from "../../context/Cart";
 
 import {
     bagOpacity,
-    innerNavList,
+    bagContainer,
     theBag,
     bagHeader,
     bagTitle,
@@ -17,13 +20,9 @@ import {
     xButton,
     bagContents,
 } from "./Bag.module.css"
+
+//components
 import BagCard from "../BagCard/bagCard";
-import { getImage } from "gatsby-plugin-image";
-import { graphql } from 'gatsby'
-// import { GatsbyImage } from 'gatsby-plugin-image'
-
-import { useCartContext } from "../../context/Cart";
-
 
 const MenuLinks = styled.nav`
   display: flex;
@@ -78,18 +77,17 @@ function Bag({ data, Bag, Clickable, Showbag }) {
     // const size = sessionStorage.getItem('key');
     /* ^ */
 
-     console.log('Products', products)
+    console.log('Products', products)
 
     return (
         <>
             <div id="bagOpacity" className={bagOpacity} onClick={() => { Showbag(!Bag); Clickable() }}></div>
-            <div className={innerNavList}>
+            <div className={bagContainer}>
                 <h1 className={theBag} onClick={() => { Showbag(!Bag); Clickable() }}>
                     BAG
                 </h1>
             </div>
             <MenuLinks nav={Bag}>
-
                 <div className={bagHeader}>
                     <div className={xButtonContainer} onClick={() => { Showbag(!Bag); Clickable() }}>
                         <button className={xButton}>x</button>
@@ -104,7 +102,7 @@ function Bag({ data, Bag, Clickable, Showbag }) {
                     {products.map(product => (
                         <BagCard productName={product.name} productPrice={product.price} productImage={getProductImageData(product.imageName)} theSize={"M"} />
                     ))}
-                    
+
                 </div>
 
                 <div className={bagFooter}>

@@ -1,7 +1,6 @@
 .container{
     width: 100%;
     height: 150px;
-    /* background-color: rgb(68, 255, 0); */
     display: flex;
     justify-content: center;
     align-content: center;
@@ -9,11 +8,9 @@
     padding-bottom: 10px;
 }
 
-
 .bagCardContainer{
     width: 295px;
     height: 130px;
-    /* background-color: aqua; */
     display: flex;
     justify-content: space-between;
 }
@@ -24,14 +21,14 @@
 
 .xButton{
     border: 1px solid rgba(0, 0, 0, 0.35);
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  grid-column: 1;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    grid-column: 1;
     grid-row: 1;
     z-index: 1;
     position: relative;
@@ -39,12 +36,12 @@
     right: 10px;
     background: #f0f0f0;
 }
+
 .theImage{
     height: 130px;
     width: 130px;
     border: 1px solid rgba(0, 0, 0, 0.35);
     border-radius: 15px;
-    /* background-color: rgb(170, 0, 255); */
     grid-column: 1;
     grid-row: 1;
 }
@@ -53,7 +50,6 @@
     font-size: 15px;
     flex-grow: 1;
     text-align: left;
-    /* margin-left: 6px; */
 }
 
 .productNameClass{
@@ -69,25 +65,25 @@
     display: flex;
     height: 45px;
     border: 1px solid rgba(0, 0, 0, 0.35);
-    /* border-radius: 5px; */
     justify-content: space-between;
     background: #f7f7f7;
 }
+
 .addQuantity{
     padding: 10px 20px 10px 20px;
-    /* border: none; */
     border-left:  1px solid rgba(0, 0, 0, 0.35);
     border-top: 0px;
     border-bottom: 0px;
     border-right: 0px;
     cursor: pointer;
 }
+
 .quantityNumber{
     padding: 10px 20px 10px 20px;
 }
+
 .subtractQuantity{
     padding: 10px 20px 10px 20px;
-    /* border: none; */
     border-left: 0px;
     border-top: 0px;
     border-bottom: 0px;

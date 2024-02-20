@@ -12,6 +12,7 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
 .modalContainer{
     width: 75%;
     height: 85%;
@@ -22,6 +23,7 @@
     flex-direction: column;
     padding: 25px;
 }
+
 .button{
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.35);
@@ -32,19 +34,21 @@
     height: 30px;
     cursor: pointer;
 }
+
 .title{
     text-align: center;
 }
+
 .body{
     display: flex;
     justify-content: center;
     height: inherit;
 }
+
 .footer{}
 
 @media (max-width: 1025px){
     .modalContainer{
         height: 495px;
     }
-
 }

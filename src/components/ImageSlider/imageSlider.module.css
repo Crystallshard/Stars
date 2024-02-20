@@ -5,7 +5,6 @@
 
 .slider{
     scroll-behavior: smooth;
-    /* padding-top: 90px; */
 }
 
 .leftArrow{
@@ -37,7 +36,6 @@
 }
 
 .theImage{
-    /* display: flex; */
     max-width: 613px;
     margin: auto;
     position: relative;
@@ -47,7 +45,6 @@
 .arrows{
     display: flex;
     justify-content: space-between;
-    /* margin: 0px 15px 0px 15px; */
     position: absolute;
     top: 38%;
     width: 100%;
@@ -58,12 +55,10 @@
    .theImage{
         max-width: fit-content;
    }
-    
 }
 
 @media (max-width: 821px){
     .theImage{
         max-width: none;
    }
-
 }

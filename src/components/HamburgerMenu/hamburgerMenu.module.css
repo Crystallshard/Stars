@@ -9,13 +9,13 @@
 .opacity{
   width: 100vw;
   height: 100vh;
- position: fixed;
- background: rgb(0, 0, 0);
- opacity: 0;
- transition: opacity 0.5s;
- pointer-events:none;
- z-index: 2;
- cursor: pointer;
+  position: fixed;
+  background: rgb(0, 0, 0);
+  opacity: 0;
+  transition: opacity 0.5s;
+  pointer-events:none;
+  z-index: 2;
+  cursor: pointer;
 } 
 
 .innerNavList ul{
@@ -23,10 +23,9 @@
   padding: 0px 10px 0px;
   text-align: right;
   align-items: center;
-  }
+}
 
 .innerNavList ul li{
-    
   float: none;
   display: inline-block;
 }
@@ -52,10 +51,7 @@
 }
 
 .pageLinks{
-  /* position: relative; */
-  /* bottom: 150px; */
   list-style: none;
-  
 }
 
 .pLink{
@@ -69,9 +65,7 @@
 
 /* info links */
 .infoLinks{
-  /* position: relative; */
   list-style: none;
-  /* top: 230px; */
 }
 
 .infoLinks ul, a{
@@ -84,7 +78,6 @@
 }
 
 /* media querys */
-
 @media (max-width: 431px){
  .linksContainer{
       text-align: center;
@@ -107,7 +100,7 @@
 
 @media (max-width: 321px){
   
- }
+}
  
 
  

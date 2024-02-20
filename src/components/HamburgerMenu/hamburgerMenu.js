@@ -68,8 +68,6 @@ const MenuLinks = styled.nav`
   }
 `;
 
-
-
 const HamburgerMenu = ({ title }) => {
   var [toggle, settoggle] = React.useState(0.5)
 
@@ -99,7 +97,6 @@ const HamburgerMenu = ({ title }) => {
               <div />
               <div />
             </MenuIcon>
-
           </li>
         </ul>
       </div>

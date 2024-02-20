@@ -6,7 +6,7 @@ import Footer from '../components/Footer/footer'
 import { graphql } from 'gatsby'
 import {
   productPageBody,
-  imageSelectionContainer,
+  leftAndRightContainer,
   splitContainer,
   productInfoContainer,
   productName,
@@ -114,7 +114,7 @@ export default function ProductPage({ pageContext, data }, props) {
     // }
 
     sizeElemetsArray.push(
-      <li id='size' className={productSize}>
+      <li id='size'>
         <input
           className={sizeElemetRadio}
           id={product.size[i]}
@@ -136,7 +136,7 @@ export default function ProductPage({ pageContext, data }, props) {
     <Layout>
       <CartContextProvider>
         <body className={productPageBody}>
-          <div className={imageSelectionContainer}>
+          <div className={leftAndRightContainer}>
             <div className={splitContainer}>
               <div className={leftContainer}>
                 <ImageSlider images={pictureElementsArray} />
