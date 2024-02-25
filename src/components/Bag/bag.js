@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import { getImage } from "gatsby-plugin-image";
 import { useCartContext } from "../../context/Cart";
 
@@ -49,13 +49,13 @@ const MenuLinks = styled.nav`
 
 `;
 
-function Bag({ data, Bag, Clickable, Showbag }) {
+function Bag({ Bag, Clickable, Showbag }) {
 
     const { products } = useCartContext()
 
     const getProductImageData = (productImageName) => {
         // gets the images we sourced from our query
-        const productImages = data.allImageSharp.nodes;
+        const productImages = bagData.allImageSharp.nodes;
 
         // this finds the item in the images data we just queried
         // searches for an image with a filename containing the products "imageName"
@@ -79,6 +79,16 @@ function Bag({ data, Bag, Clickable, Showbag }) {
 
     console.log('Products', products)
 
+    const bagData = useStaticQuery(graphql`
+  query ShopImages {
+    allImageSharp {
+      nodes {
+        gatsbyImageData(placeholder: BLURRED)
+      }
+    }
+  }
+`)
+
     return (
         <>
             <div id="bagOpacity" className={bagOpacity} onClick={() => { Showbag(!Bag); Clickable() }}></div>
@@ -100,7 +110,7 @@ function Bag({ data, Bag, Clickable, Showbag }) {
 
                 <div className={bagContents}>
                     {products.map(product => (
-                        <BagCard productName={product.name} productPrice={product.price} productImage={getProductImageData(product.imageName)} theSize={"M"} />
+                        <BagCard ID={product.id} productName={product.name} productPrice={product.price} productImage={getProductImageData(product.imageName)} theSize={'M'} />
                     ))}
 
                 </div>
@@ -127,14 +137,14 @@ function Bag({ data, Bag, Clickable, Showbag }) {
     )
 }
 
-export const query = graphql`
-  query ShopImages {
-    allImageSharp {
-      nodes {
-        gatsbyImageData(placeholder: BLURRED)
-      }
-    }
-  }
-`
+// export const query = useStaticQuery(graphql`
+//   query ShopImages {
+//     allImageSharp {
+//       nodes {
+//         gatsbyImageData(placeholder: BLURRED)
+//       }
+//     }
+//   }
+// `)
 
 export default Bag; 

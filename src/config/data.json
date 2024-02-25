@@ -2,14 +2,14 @@
     "products": [
         {
             "id": "1",
-            "url": "CosmoSkull-forcefed-Tee",
-            "name": "COSMOSKULL FORCEFED TEE",
-            "price": 99.99,
+            "url": "Louis-vuitton-chunky-knit-jacket",
+            "name": "LOUIS VUITTON CHUNKY KNIT JACKET",
+            "price": 899.99,
             "color": [[143, 37, 37], [0, 191, 255]],
             "size": ["XS", "S", "M", "L", "XL"],
-            "imageName": "CosmoSkull-forcefed-Tee.png",
-            "productImages" : ["CosmoSkull-forcefed-Tee.png", "CosmoSkull-forcefed-Tee.png"],
-            "details": "Forcefed tee, from the brand Cosmoskull",
+            "imageName": "Louis-Vuitton-Chunky-Knit-Jacket",
+            "productImages" : ["Louis-Vuitton-Chunky-Knit-Jacket", "Louis-Vuitton-Chunky-Knit-Jacket"],
+            "details": "Louis Vuitton chunky knit jacket from their 2020 fall/winter collection",
             "sizeDetails": "these are the size details",
             "deliveryDetails": "these are the delivery details"
         },

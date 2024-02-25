@@ -6,6 +6,7 @@
     align-content: center;
     flex-wrap: wrap;
     padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .bagCardContainer{

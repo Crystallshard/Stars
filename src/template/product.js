@@ -34,11 +34,11 @@ import Accordion from '../components/Accordion/accordion';
 import ImageSlider from '../components/ImageSlider/imageSlider';
 import Modal from '../components/Modal/modal';
 
-import { useCartContext, CartContextProvider } from '../context/Cart';
+import { useCartContext } from '../context/Cart';
 import Layout from '../components/Layout/layout';
 
 
-export default function ProductPage({ pageContext, data }, props) {
+export default function ProductPage({ pageContext, data }) {
   const getProductImageData = (productImageName) => {
     // gets the images we sourced from our query
     const productImages = data.allImageSharp.nodes;
@@ -132,9 +132,11 @@ export default function ProductPage({ pageContext, data }, props) {
     );
   }
 
+  console.log('Product data', product)
+
   return (
-    <Layout>
-      <CartContextProvider>
+    // <Layout>
+    
         <body className={productPageBody}>
           <div className={leftAndRightContainer}>
             <div className={splitContainer}>
@@ -175,8 +177,7 @@ export default function ProductPage({ pageContext, data }, props) {
           </div>
           <Footer />
         </body>
-      </CartContextProvider>
-    </Layout>
+    // </Layout>
   )
 }
 

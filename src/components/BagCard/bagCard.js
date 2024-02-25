@@ -15,14 +15,18 @@ import {
     subtractQuantity,
 } from "./bagCard.module.css"
 
-function BagCard({ productName, productPrice, theSize, productImage }) {
+import { useCartContext } from '../../context/Cart';
+
+function BagCard({ ID, productName, productPrice, theSize, productImage }) {
+
+    const { deleteProduct } = useCartContext()
 
     return (
         <>
             <div className={container}>
                 <div className={bagCardContainer}>
                     <div className={imageContainer}>
-                        <div className={xButton}>X</div>
+                        <button className={xButton} onClick={()=> deleteProduct(ID)}>X</button>
                         <div className={theImage}>
                             <GatsbyImage
                                 image={productImage}

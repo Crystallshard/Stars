@@ -1,6 +1,6 @@
 const path = require("path")
 
-const productJSON = require("./src/config/products.json") 
+const productJSON = require("./src/config/data.json") 
 const productTemplate = path.resolve(`src/template/product.js`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
@@ -19,7 +19,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({graphql, actions, reporter}) => {
   const { createPage } = actions
 
-    productJSON.forEach(product => {
+    productJSON.products.forEach(product => {
       createPage({
         path: `/products/${product.url}`,
         component: productTemplate,

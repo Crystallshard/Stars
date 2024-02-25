@@ -52,7 +52,16 @@ h1{
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-top: 5px;
+}
+
+.bagContents::-webkit-scrollbar{
+  display: none;
 }
 
 .bagFooter{
