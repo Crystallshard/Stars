@@ -8,7 +8,7 @@ import {
 import HamburgerMenu from '../components/HamburgerMenu/hamburgerMenu'
 
 const IndexPage = () => {
-
+  
   return (
     <>
       <HamburgerMenu />
@@ -34,3 +34,4 @@ const IndexPage = () => {
 }
 
 export default IndexPage
+

@@ -6,12 +6,10 @@ import {
 
 //components
 import { CartContextProvider } from '../../context/Cart'
-import  Navbar  from '../Navbar/navbar'
+import Navbar from '../Navbar/navbar'
 import Bag from '../Bag/bag'
 
-const Layout = ({ pageTitle, children }) => {
-
-  // console.log('Hello Im Layout')
+const Layout = ({ location="", children }) => {
 
   /* when you click on the bag, open bag, and dim the background */
   var [toggle, settoggle] = React.useState(0.5)
@@ -32,11 +30,13 @@ const Layout = ({ pageTitle, children }) => {
   const [bag, showBag] = useState(true);
   /* ^ */
 
+  const locationPathname = location.pathname;
+
   return (
     <CartContextProvider>
       <div className={layoutContainer}>
-       <Navbar />
-       <Bag Bag={bag} Clickable={() => { clickable() }} Showbag={() => { showBag(!bag) }} />
+        {locationPathname !== '/' ? <Navbar /> : null}
+        {locationPathname !== '/' ? <Bag Bag={bag} Clickable={() => { clickable() }} Showbag={() => { showBag(!bag) }} /> : null}
         <main>
           {children}
         </main>

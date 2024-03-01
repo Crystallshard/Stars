@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.Stars.tld",
     title: "Stars",
-    
+    siteURL: "Starsunlocked.ca"
   },
   plugins: [ 
     "gatsby-plugin-image",

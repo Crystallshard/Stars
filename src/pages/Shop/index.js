@@ -11,8 +11,6 @@ import {
 //components
 import Footer from '../../components/Footer/footer';
 import ProductCard from '../../components/ProductCard/index';
-// import Layout from "../../components/Layout/layout";
-
 
 const Container = styled.div`
 display: grid;
@@ -65,7 +63,6 @@ const ShopPage = ({ data }) => {
 
   return (
     <>
-      {/* <Layout> */}
         <body className={shopBody}>
           <Container>
             {Data.products.map(products => (
@@ -74,7 +71,6 @@ const ShopPage = ({ data }) => {
           </Container>
           <Footer />
         </body>
-      {/* </Layout> */}
     </>
   )
 
