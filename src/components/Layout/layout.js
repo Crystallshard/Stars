@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import {
   layoutContainer,
 } from './layout.module.css'
@@ -29,7 +29,7 @@ const Layout = ({ location="", children }) => {
 
   const [bag, showBag] = useState(true);
   /* ^ */
-
+ 
   const locationPathname = location.pathname;
 
   return (

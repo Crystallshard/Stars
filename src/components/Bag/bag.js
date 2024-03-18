@@ -3,6 +3,7 @@ import React from "react";
 import { useStaticQuery, graphql } from 'gatsby'
 import { getImage } from "gatsby-plugin-image";
 import { useCartContext } from "../../context/Cart";
+import formatCurrency from "./util"
 
 import {
     bagOpacity,
@@ -51,7 +52,7 @@ const MenuLinks = styled.nav`
 
 function Bag({ Bag, Clickable, Showbag }) {
 
-    const { products } = useCartContext()
+    const { cart } = useCartContext()
 
     const getProductImageData = (productImageName) => {
         // gets the images we sourced from our query
@@ -74,11 +75,16 @@ function Bag({ Bag, Clickable, Showbag }) {
     }
 
     /* get size from selected session storage */
-    // const size = sessionStorage.getItem('key');
-    /* ^ */
+    const size = sessionStorage.getItem('key');
 
-    console.log('Products', products)
+    // console.log('Products', products)
+    const bagQuantity = cart.length
 
+    const result = cart.reduce((a, v) => a = a + v.price * v.count, 0)
+    const subTotal = formatCurrency(result)
+
+    
+    
     const bagData = useStaticQuery(graphql`
   query ShopImages {
     allImageSharp {
@@ -94,7 +100,7 @@ function Bag({ Bag, Clickable, Showbag }) {
             <div id="bagOpacity" className={bagOpacity} onClick={() => { Showbag(!Bag); Clickable() }}></div>
             <div className={bagContainer}>
                 <h1 className={theBag} onClick={() => { Showbag(!Bag); Clickable() }}>
-                    BAG
+                    ({bagQuantity})BAG
                 </h1>
             </div>
             <MenuLinks nav={Bag}>
@@ -109,8 +115,16 @@ function Bag({ Bag, Clickable, Showbag }) {
                 </div>
 
                 <div className={bagContents}>
-                    {products.map(product => (
-                        <BagCard ID={product.id} productName={product.name} productPrice={product.price} productImage={getProductImageData(product.imageName)} theSize={'M'} />
+                    {cart.map(product => (
+                        
+                        <BagCard 
+                            productQuantity={product.count} 
+                            ID={product.id} 
+                            productName={product.name} 
+                            productPrice={product.price} 
+                            productImage={getProductImageData(product.imageName)} 
+                            theSize={product.size} 
+                            />
                     ))}
 
                 </div>
@@ -125,7 +139,7 @@ function Bag({ Bag, Clickable, Showbag }) {
                             <div className={subtotalDivider}></div>
                         </li>
                         <li>
-                            <h1>200.00</h1>
+                            <h1>{subTotal}</h1>
                         </li>
                     </ul>
                     <button className={checkOutButton}>

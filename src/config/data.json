@@ -6,12 +6,15 @@
             "name": "LOUIS VUITTON CHUNKY KNIT JACKET",
             "price": 899.99,
             "color": [[143, 37, 37], [0, 191, 255]],
-            "size": ["XS", "S", "M", "L", "XL"],
+            "sizeOptions": ["XS", "S", "M", "L", "XL"],
             "imageName": "Louis-Vuitton-Chunky-Knit-Jacket",
             "productImages" : ["Louis-Vuitton-Chunky-Knit-Jacket", "Louis-Vuitton-Chunky-Knit-Jacket"],
             "details": "Louis Vuitton chunky knit jacket from their 2020 fall/winter collection",
             "sizeDetails": "these are the size details",
-            "deliveryDetails": "these are the delivery details"
+            "deliveryDetails": "these are the delivery details",
+            "count": 1,
+            "size": "",
+            "inBag": false
         },
         {
             "id": "2",
@@ -19,12 +22,15 @@
             "name": "KAPITAL BANDANA SHIRT",
             "price": 349.99,
             "color": [[77, 108, 150], [238, 235, 89]],
-            "size": ["XS", "S", "M", "L", "XL"],
+            "sizeOptions": ["XS", "S", "M", "L", "XL"],
             "imageName": "Kapital-bandana-shirt.png", 
             "productImages" : ["Kapital-bandana-shirt-one.png", "Kapital-bandana-shirt-two.png", "Kapital-bandana-shirt-three.png"],
             "details": "Shirt made of bandanas sewn together. Each individule bandana has been faded in the sun for a bleaching effect",
             "sizeDetails": "these are the size details",
-            "deliveryDetails": "these are the delivery details"
+            "deliveryDetails": "these are the delivery details",
+            "count": 1,
+            "size": "",
+            "inBag": false
         },
         {
             "id": "3",
@@ -32,12 +38,15 @@
             "name": "SINGLE STITCHED INSIDE OUT TEE",
             "price": 49.99,
             "color": [[0, 0, 0]],
-            "size": ["L"],
+            "sizeOptions": ["L"],
             "imageName": "Single-Stitched-Inside-Out-Tee.png",
             "productImages" : ["Single-Stitched-Inside-Out-Tee.png", "Single-Stitched-Inside-Out-Tee.png"],
             "details": "Vintage inside out tee",
             "sizeDetails": "these are the size details",
-            "deliveryDetails": "these are the delivery details"
+            "deliveryDetails": "these are the delivery details",
+            "count": 1,
+            "size": "",
+            "inBag": false
         },
         {
             "id": "4",
@@ -45,12 +54,15 @@
             "name": "UNSOUNDRAGS VINTAGE SHIRT",
             "price": 49.99,
             "color": [[202, 63, 60]],
-            "size": ["M"],
+            "sizeOptions": ["M"],
             "imageName": "Unsoundrags-vintage-shirt.png",
             "productImages" : ["Unsoundrags-vintage-shirt.png", "Unsoundrags-vintage-shirt.png"],
             "details": "Vintage t-shirt with sleeves cut off. sold buy unsoundrags",
             "sizeDetails": "these are the size details",
-            "deliveryDetails": "these are the delivery details"
+            "deliveryDetails": "these are the delivery details",
+            "count": 1,
+            "size": "",
+            "inBag": false
         },
         {
             "id": "5",
@@ -58,12 +70,15 @@
             "name": "NINE JEAN JACKET",
             "price": 199.99,
             "color": [[128, 142, 144]],
-            "size": ["XS", "S", "M", "L", "XL"],
+            "sizeOptions": ["XS", "S", "M", "L", "XL"],
             "imageName": "Nine-jean-jacket.png",
             "productImages" : ["Nine-jean-jacket.png", "Nine-jean-jacket.png"],
             "details": "(N)umber nine jean jacket, fall-winter",
             "sizeDetails": "these are the size details",
-            "deliveryDetails": "these are the delivery details"
+            "deliveryDetails": "these are the delivery details",
+            "count": 1,
+            "size": "",
+            "inBag": false
         },
         {
             "id": "6",
@@ -71,12 +86,15 @@
             "name": "ARABOC HOODIE",
             "price": 79.99,
             "color": [[84, 131, 171]],
-            "size": ["XS", "S", "M", "L", "XL"],
+            "sizeOptions": ["XS", "S", "M", "L", "XL"],
             "imageName": "Arabic-Hoodie.png",
             "productImages" : ["Arabic-Hoodie.png", "Arabic-Hoodie.png"],
             "details": "Hoodie from an unknown brand",
             "sizeDetails": "these are the size details",
-            "deliveryDetails": "these are the delivery details"
+            "deliveryDetails": "these are the delivery details",
+            "count": 1,
+            "size": "",
+            "inBag": false
         }
     ]
 }

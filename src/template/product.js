@@ -17,7 +17,7 @@ import {
   // productColor,
   // productColorList,
   sizeContainer,
-  productSize,
+  // productSize,
   sizeChartContainer,
   addToCartContainer,
   addToCartButton,
@@ -35,8 +35,6 @@ import ImageSlider from '../components/ImageSlider/imageSlider';
 import Modal from '../components/Modal/modal';
 
 import { useCartContext } from '../context/Cart';
-import Layout from '../components/Layout/layout';
-
 
 export default function ProductPage({ pageContext, data }) {
   const getProductImageData = (productImageName) => {
@@ -61,7 +59,7 @@ export default function ProductPage({ pageContext, data }) {
 
   const { product } = pageContext
 
-  const { addProductToCart } = useCartContext()
+  const { addProductToCart, sizeGarmentCommit, sizeSelectBuffer } = useCartContext()
 
   /* on-click functions for sizes */
   const [radio, setRadio] = useState();
@@ -96,47 +94,43 @@ export default function ProductPage({ pageContext, data }) {
   }
 
   const sizeElemetsArray = [];
-  for (let i = 0; i < Object.values(product.size).length; i++) {
+  for (let i = 0; i < Object.values(product.sizeOptions).length; i++) {
 
     /* saves size option to session storage */
-    function profileClick() {
+    function sizeClick() {
       if (typeof window !== 'undefined') {
-        sessionStorage.setItem('key', product.size[i]);
+        sessionStorage.setItem('key', product.sizeOptions[i]);
       }
 
-      var buttonID = document.getElementById(product.size[i]);
+      var buttonID = document.getElementById(product.sizeOptions[i]);
       buttonID.checked = true;
     };
     /* ^ */
 
     // if (typeof window !== 'undefined') {
-    //   sessionStorage.clear();
+      // sessionStorage.clear();
     // }
 
     sizeElemetsArray.push(
       <li id='size'>
         <input
           className={sizeElemetRadio}
-          id={product.size[i]}
+          id={product.sizeOptions[i]}
           type="radio"
           name="radio"
           value={radio}
         // checked={radio === product.size[i]}
         />
         <label className={sizeLetter}
-          for={product.size[i]}
-          onClick={profileClick}
-          onKeyDown={profileClick}
-        >{product.size[i]}</label>
+          for={product.sizeOptions[i]}
+          onClick={ ()=>{sizeClick() ; sizeSelectBuffer(product.id, product) }}
+          onKeyDown={sizeClick}
+        >{product.sizeOptions[i]}</label>
       </li>
     );
   }
 
-  console.log('Product data', product)
-
   return (
-    // <Layout>
-    
         <body className={productPageBody}>
           <div className={leftAndRightContainer}>
             <div className={splitContainer}>
@@ -165,7 +159,7 @@ export default function ProductPage({ pageContext, data }) {
 
 
                 <div className={addToCartContainer}>
-                  <button className={addToCartButton} onClick={() => addProductToCart(product)}>ADD TO CART</button>
+                  <button className={addToCartButton} onClick={() => {addProductToCart(product) ; sizeGarmentCommit(product.id, product)}}>ADD TO CART</button>
                 </div>
                 <div className={sizeChartContainer}>
                   <h3 className={sizeChart} onClick={() => { setOpenModal(true) }}>SIZE CHART</h3>
@@ -177,7 +171,6 @@ export default function ProductPage({ pageContext, data }) {
           </div>
           <Footer />
         </body>
-    // </Layout>
   )
 }
 

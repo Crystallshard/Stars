@@ -17,16 +17,17 @@ import {
 
 import { useCartContext } from '../../context/Cart';
 
-function BagCard({ ID, productName, productPrice, theSize, productImage }) {
+function BagCard({ ID, productName, productPrice, theSize, productImage, productQuantity, test}) {
 
-    const { deleteProduct } = useCartContext()
-
+    const { deleteProduct, incrementQuantity, deincrementQuantity } = useCartContext()
+    
+    
     return (
         <>
             <div className={container}>
                 <div className={bagCardContainer}>
                     <div className={imageContainer}>
-                        <button className={xButton} onClick={()=> deleteProduct(ID)}>X</button>
+                        <button className={xButton} onClick={() => deleteProduct(ID, theSize)}>X</button>
                         <div className={theImage}>
                             <GatsbyImage
                                 image={productImage}
@@ -40,9 +41,9 @@ function BagCard({ ID, productName, productPrice, theSize, productImage }) {
                             <h1>{theSize}</h1>
                         </div>
                         <div className={quantityCounter}>
-                            <button className={subtractQuantity}>-</button>
-                            <div className={quantityNumber}>1</div>
-                            <button className={addQuantity}>+</button>
+                            <button className={subtractQuantity} onClick={()=>deincrementQuantity(ID, theSize, productQuantity)}>-</button>
+                            <div className={quantityNumber}>{productQuantity}</div>
+                            <button className={addQuantity} onClick={()=>incrementQuantity(ID, theSize)}>+</button>
                         </div>
                     </div>
                 </div>
