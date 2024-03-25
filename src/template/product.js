@@ -96,14 +96,24 @@ export default function ProductPage({ pageContext, data }) {
   const sizeElemetsArray = [];
   for (let i = 0; i < Object.values(product.sizeOptions).length; i++) {
 
-    /* saves size option to session storage */
+    /* saves size option to session storage & stops user from adding to cart w/o choosing size first */
     function sizeClick() {
       if (typeof window !== 'undefined') {
         sessionStorage.setItem('key', product.sizeOptions[i]);
       }
 
-      var buttonID = document.getElementById(product.sizeOptions[i]);
-      buttonID.checked = true;
+      var mustChooseSize = false
+      var buttonID = document.getElementById(product.sizeOptions[i]).checked;
+      if(buttonID === true){
+        mustChooseSize =true
+      } 
+
+      if(mustChooseSize === false){
+        console.log("proof it works")
+        document.getElementById("addcartbutton").style.backgroundColor = "#e4e4e4"
+        document.getElementById("addcartbutton").style.pointerEvents = "unset"
+      }
+      
     };
     /* ^ */
 
@@ -119,7 +129,7 @@ export default function ProductPage({ pageContext, data }) {
           type="radio"
           name="radio"
           value={radio}
-        // checked={radio === product.size[i]}
+          // checked={radio === product.size[i]}
         />
         <label className={sizeLetter}
           for={product.sizeOptions[i]}
@@ -159,7 +169,7 @@ export default function ProductPage({ pageContext, data }) {
 
 
                 <div className={addToCartContainer}>
-                  <button className={addToCartButton} onClick={() => {addProductToCart(product) ; sizeGarmentCommit(product.id, product)}}>ADD TO CART</button>
+                  <button id="addcartbutton" className={addToCartButton} onClick={() => {addProductToCart(product) ; sizeGarmentCommit(product.id, product)}}>ADD TO CART</button>
                 </div>
                 <div className={sizeChartContainer}>
                   <h3 className={sizeChart} onClick={() => { setOpenModal(true) }}>SIZE CHART</h3>

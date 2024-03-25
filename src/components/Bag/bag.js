@@ -75,7 +75,7 @@ function Bag({ Bag, Clickable, Showbag }) {
     }
 
     /* get size from selected session storage */
-    const size = sessionStorage.getItem('key');
+    // const size = sessionStorage.getItem('key');
 
     // console.log('Products', products)
     const bagQuantity = cart.length

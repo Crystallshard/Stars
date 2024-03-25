@@ -3,7 +3,7 @@ import React, { createContext, useState, useContext, useEffect } from 'react'
 
 export const CartContext = createContext({
     cart: [],
-    products: [],
+    // products: [],
     addProductToCart: (product) => { },
     deleteProduct: (id, size) => { },
     incrementQuantity: (id, size) => { },
@@ -14,13 +14,18 @@ export const CartContext = createContext({
 
 export const CartContextProvider = ({ children }) => {
 
-    const [products, setProducts] = useState([])
+    // const [products, setProducts] = useState([])
     const [cart, setCart] = useState([])
-    const size = sessionStorage.getItem('key');
     
+    let test = ""
+    if (typeof window !== 'undefined') {
+        const size = sessionStorage.getItem('key');
+        test = size
+    }
+
     useEffect(() => {
         console.log("cart array", cart);
-    }, [cart, products]);
+    }, [cart]);
 
     // const match = () => {
     //     let theMatch = ""
@@ -43,16 +48,16 @@ export const CartContextProvider = ({ children }) => {
     const sizeCommit = (id, product) => {
         setCart((prev) =>
             prev.map((item) =>
-                item.size === product.size ? { ...item, size: size, inBag: true } : item
+                item.size === product.size ? { ...item, size: test, inBag: true } : item
             )
         );
     }
 
     const addProduct = (product) => {
-        increment(product.id, size)
+        increment(product.id, test)
         let result = false
         cart.map((item) => {
-            const a = cart.some((items) => items.size === size && items.id === product.id)        
+            const a = cart.some((items) => items.size === test && items.id === product.id)        
             result = a
         })
         // console.log("the id in page", product.id, "and the result is", result)
@@ -66,7 +71,7 @@ export const CartContextProvider = ({ children }) => {
                 alreadyInCart = true;
             }
 
-            if (alreadyInCart && item.size !== size) {
+            if (alreadyInCart && item.size !== test) {
                 alreadyInCartSize = true
             }
         })
@@ -110,7 +115,7 @@ export const CartContextProvider = ({ children }) => {
     return (
         <CartContext.Provider value={{
             cart,
-            products,
+            // products,
             addProductToCart: addProduct,
             deleteProduct: deleteProductFromCart,
             incrementQuantity: increment,
